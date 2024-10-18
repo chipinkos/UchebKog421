@@ -16,7 +16,7 @@ namespace UP41
     /// </summary>
     public partial class App : Application
     {
-        public static UchebkaKogSQLEntities db = new UchebkaKogSQLEntities();
+        public static Uchebka123k4s1SQLEntities1 db = new Uchebka123k4s1SQLEntities1();
         public static int currentUser;
 
         protected override void OnExit(ExitEventArgs e)
