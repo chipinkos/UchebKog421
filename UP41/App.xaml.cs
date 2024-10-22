@@ -60,6 +60,7 @@ namespace UP41
                     {
                         string item = srReader.ReadLine();
                         currentUser = int.Parse(item);
+                        currentUser = srReader.ReadLine();
                     }
                 }
                 srReader.Close();

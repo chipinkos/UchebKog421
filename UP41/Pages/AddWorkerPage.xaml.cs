@@ -27,7 +27,7 @@ namespace UP41.Pages
             CityCbx.ItemsSource = App.db.City.ToList();
             CityCbx.DisplayMemberPath = "Title";
             TaskCbx.ItemsSource = App.db.PerformTasks.ToList();
-            TaskCbx.DisplayMemberPath = "Title";
+            TaskCbx.DisplayMemberPath = "Name";
         }
         private void BackButt_Click(object sender, RoutedEventArgs e)
         {
@@ -35,8 +35,10 @@ namespace UP41.Pages
         }
         private void SaveButt_Click(object sender, RoutedEventArgs e)
         {
-            if (LoginTbx.Text == "" || PassTbx.Text == "" || SurnameTbx.Text == "" || NameTbx.Text == "" || CityCbx.SelectedIndex == -1 ||
-                StreetCbx.SelectedIndex == -1 || HomeTbx.Text == "" || QualCbx.SelectedIndex == -1 || EduCbx.SelectedIndex == -1 || BirthDP.Text == "")
+            if (LoginTbx.Text == "" || PassTbx.Text == "" || SurnameTbx.Text == "" ||
+                NameTbx.Text == "" || CityCbx.SelectedIndex == -1 ||
+                StreetCbx.SelectedIndex == -1 || HomeTbx.Text == "" || QualCbx.SelectedIndex == -1 ||
+                EduCbx.SelectedIndex == -1 || BirthDP.Text == "")
                 MessageBox.Show("Пожалуйста, заполните все необходимые данные. ");
             else if (App.db.User.Any(x => x.Login == LoginTbx.Text)) MessageBox.Show("Данный логин уже испольуется.");
             else
@@ -60,11 +62,10 @@ namespace UP41.Pages
                     App.db.SaveChanges();
                     foreach (var item in TaskList.Items)
                     {
-                        MessageBox.Show("z");
-                        User_Tasks ut = new User_Tasks();
-                        ut.Id_User = user.Id;
-                        ut.Id_PT = ((PerformTasks)item).Id;
-                        App.db.User_Tasks.Add(ut);
+                        UserTasks ut = new UserTasks();
+                        ut.Login = user.Login;
+                        ut.IdTask = ((PerformTasks)item).Id;
+                        App.db.UserTasks.Add(ut);
                     }
                 }
                 catch (Exception ex)
@@ -94,7 +95,7 @@ namespace UP41.Pages
             {
                 foreach (var item in TaskList.Items)
                 {
-                    if (((PerformTasks)item).Title == ((PerformTasks)TaskCbx.SelectedItem).Title) isDuplicate = true;
+                    if (((PerformTasks)item).Name == ((PerformTasks)TaskCbx.SelectedItem).Name) isDuplicate = true;
                 }
                 if (isDuplicate) MessageBox.Show("Эта задача уже выбрана.");
                 else TaskList.Items.Add((PerformTasks)(TaskCbx.SelectedItem));
