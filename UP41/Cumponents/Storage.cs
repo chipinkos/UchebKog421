@@ -12,17 +12,20 @@ namespace UP41.Cumponents
     using System;
     using System.Collections.Generic;
     
-    public partial class MaterialUnit
+    public partial class Storage
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MaterialUnit()
+        public Storage()
         {
+            this.Accessories = new HashSet<Accessories>();
             this.Material = new HashSet<Material>();
         }
     
         public int Id { get; set; }
-        public string Title { get; set; }
+        public string Name { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Accessories> Accessories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Material> Material { get; set; }
     }

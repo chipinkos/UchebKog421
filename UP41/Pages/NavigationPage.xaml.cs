@@ -27,14 +27,17 @@ namespace UP41.Pages
             if (RoleId != 3) WorkersButt.Visibility = Visibility.Collapsed;
             if (RoleId == 4) MaterialsButt.Visibility = Visibility.Collapsed;
         }
+
         private void ExitButt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AuthPage());
         }
+
         private void WorkersButt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new WorkersListPage());
         }
+
         private void MaterialsButt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new MaterialsPage());

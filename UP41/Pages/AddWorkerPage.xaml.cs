@@ -29,16 +29,16 @@ namespace UP41.Pages
             TaskCbx.ItemsSource = App.db.PerformTasks.ToList();
             TaskCbx.DisplayMemberPath = "Name";
         }
+
         private void BackButt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new WorkersListPage());
         }
+
         private void SaveButt_Click(object sender, RoutedEventArgs e)
         {
-            if (LoginTbx.Text == "" || PassTbx.Text == "" || SurnameTbx.Text == "" ||
-                NameTbx.Text == "" || CityCbx.SelectedIndex == -1 ||
-                StreetCbx.SelectedIndex == -1 || HomeTbx.Text == "" || QualCbx.SelectedIndex == -1 ||
-                EduCbx.SelectedIndex == -1 || BirthDP.Text == "")
+            if (LoginTbx.Text == "" || PassTbx.Text == "" || SurnameTbx.Text == "" || NameTbx.Text == "" || CityCbx.SelectedIndex == -1 ||
+                StreetCbx.SelectedIndex == -1 || HomeTbx.Text == "" || QualCbx.SelectedIndex == -1 || EduCbx.SelectedIndex == -1 || BirthDP.Text == "")
                 MessageBox.Show("Пожалуйста, заполните все необходимые данные. ");
             else if (App.db.User.Any(x => x.Login == LoginTbx.Text)) MessageBox.Show("Данный логин уже испольуется.");
             else
@@ -80,6 +80,7 @@ namespace UP41.Pages
                 }
             }
         }
+
         private void CityCbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             StreetSP.Visibility = Visibility.Visible;
@@ -87,6 +88,7 @@ namespace UP41.Pages
             StreetCbx.ItemsSource = App.db.Street.Where(x => x.Id_City == city).ToList();
             StreetCbx.DisplayMemberPath = "Title";
         }
+
         private void AddBut_Click(object sender, RoutedEventArgs e)
         {
             bool isDuplicate = false;

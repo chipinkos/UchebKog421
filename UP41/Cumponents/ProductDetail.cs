@@ -12,13 +12,13 @@ namespace UP41.Cumponents
     using System;
     using System.Collections.Generic;
     
-    public partial class User_Tasks
+    public partial class ProductDetail
     {
-        public int Id { get; set; }
-        public Nullable<int> Id_User { get; set; }
-        public Nullable<int> Id_PT { get; set; }
+        public int IdProduct { get; set; }
+        public int IdDetail { get; set; }
+        public Nullable<int> Count { get; set; }
     
-        public virtual PerformTasks PerformTasks { get; set; }
-        public virtual User User { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Product Product1 { get; set; }
     }
 }

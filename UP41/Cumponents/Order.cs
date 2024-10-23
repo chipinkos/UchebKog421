@@ -12,18 +12,27 @@ namespace UP41.Cumponents
     using System;
     using System.Collections.Generic;
     
-    public partial class HardwareUnit
+    public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HardwareUnit()
+        public Order()
         {
-            this.Hardware = new HashSet<Hardware>();
+            this.Document = new HashSet<Document>();
         }
     
         public int Id { get; set; }
-        public string Title { get; set; }
+        public System.DateTime DateOrder { get; set; }
+        public string Name { get; set; }
+        public Nullable<int> IdProduct { get; set; }
+        public string LoginCustomer { get; set; }
+        public string LoginManager { get; set; }
+        public Nullable<decimal> Amount { get; set; }
+        public Nullable<System.DateTime> DateEnd { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hardware> Hardware { get; set; }
+        public virtual ICollection<Document> Document { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
     }
 }

@@ -26,11 +26,12 @@ namespace UP41.Pages
             InitializeComponent();
             WorkersList.ItemsSource = App.db.User.Where(x => x.RoleId == 6).ToList();
         }
-        private void AddWorkerButt_Click(object sender, RoutedEventArgs e)
 
+        private void AddWorkerButt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddWorkerPage());
         }
+
         private void BackButt_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new NavigationPage());

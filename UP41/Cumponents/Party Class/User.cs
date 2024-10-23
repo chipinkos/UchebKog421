@@ -13,18 +13,23 @@ namespace UP41.Cumponents
         {
             get
             {
-                DateTime date = (DateTime)BirthDate;
-                return (int)((DateTime.Now - date).TotalDays / 365.2425);
+                if (BirthDate != null)
+                {
+                    DateTime date = (DateTime)BirthDate;
+                    return (int)((DateTime.Now - date).TotalDays / 365.2425);
+                }
+                else return 0;
             }
         }
         public string Tasks
         {
             get
             {
-                var taskNames = App.db.User_Tasks
-                    .Where(x => x.Id_User == Id)
-                    .Select(ut => ut.PerformTasks.Title)
+                var taskNames = App.db.UserTasks
+                    .Where(x => x.Login == Login)
+                    .Select(ut => ut.PerformTasks.Name)
                     .ToList();
+
                 return string.Join(", ", taskNames);
             }
         }

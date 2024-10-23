@@ -16,8 +16,8 @@ namespace UP41
     /// </summary>
     public partial class App : Application
     {
-        public static Uchebka123k4s1SQLEntities1 db = new Uchebka123k4s1SQLEntities1();
-        public static int currentUser;
+        public static UP41Entities228 db = new UP41Entities228();
+        public static string currentUser;
 
         protected override void OnExit(ExitEventArgs e)
         {
@@ -58,8 +58,6 @@ namespace UP41
                 {
                     while (!srReader.EndOfStream)
                     {
-                        string item = srReader.ReadLine();
-                        currentUser = int.Parse(item);
                         currentUser = srReader.ReadLine();
                     }
                 }

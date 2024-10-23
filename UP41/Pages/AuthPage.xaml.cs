@@ -32,7 +32,7 @@ namespace UP41.Pages
         {
             if (App.db.User.Any(x => x.Login == LoginTbx.Text && x.Password == PassTbx.Password))
             {
-                App.currentUser = App.db.User.Where(x => x.Login == LoginTbx.Text && x.Password == PassTbx.Password).First().Login; 
+                App.currentUser = App.db.User.Where(x => x.Login == LoginTbx.Text && x.Password == PassTbx.Password).First().Login;
                 if ((bool)RemberCheck.IsChecked) App.Current.Properties[0] = App.currentUser;
                 NavigationService.Navigate(new NavigationPage());
             }

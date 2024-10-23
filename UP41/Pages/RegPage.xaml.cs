@@ -73,10 +73,10 @@ namespace UP41.Pages
                     user.Login = LoginTbx.Text;
                     user.Password = PassTbx.Password;
                     user.RoleId = 5;
-                    App.db.User.Add(user); 
+                    App.db.User.Add(user);
                     App.db.SaveChanges();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Произошла ошибка. Код ошибки: " + ex.Message);
                 }
