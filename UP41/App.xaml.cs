@@ -16,7 +16,9 @@ namespace UP41
     /// </summary>
     public partial class App : Application
     {
-        public static UP41Entities228 db = new UP41Entities228();
+        public static UP41Entities1 db = new UP41Entities1();
+        public static ProductControl productControl;
+        public static MainWindow mainWindow;
         public static string currentUser;
 
         protected override void OnExit(ExitEventArgs e)

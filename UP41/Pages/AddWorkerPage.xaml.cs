@@ -64,7 +64,7 @@ namespace UP41.Pages
                     {
                         UserTasks ut = new UserTasks();
                         ut.Login = user.Login;
-                        ut.IdTask = ((PerformTasks)item).Id;
+                        ut.Id_PT = ((PerformTasks)item).Id;
                         App.db.UserTasks.Add(ut);
                     }
                 }

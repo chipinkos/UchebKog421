@@ -30,11 +30,11 @@ namespace UP41.Cumponents
         public string Patronymic { get; set; }
         public Nullable<int> IdUserImage { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }
+        public string Qualification { get; set; }
+        public string Education { get; set; }
         public Nullable<int> Id_Street { get; set; }
         public string House { get; set; }
         public string Flat { get; set; }
-        public string Qualification { get; set; }
-        public string Education { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
@@ -42,8 +42,8 @@ namespace UP41.Cumponents
         public virtual ICollection<Order> Order1 { get; set; }
         public virtual Role Role { get; set; }
         public virtual Street Street { get; set; }
-        public virtual UserImage UserImage { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserTasks> UserTasks { get; set; }
+        public virtual UserImage UserImage { get; set; }
     }
 }

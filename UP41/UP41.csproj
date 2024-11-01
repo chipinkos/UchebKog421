@@ -64,6 +64,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\DocumentWindow.xaml.cs">
+      <DependentUpon>DocumentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\HistoryWindow.xaml.cs">
+      <DependentUpon>HistoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProductWindow.xaml.cs">
+      <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StatusWindows.xaml.cs">
+      <DependentUpon>StatusWindows.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Cumponents\AccessoriesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\DocumentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\ItemUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\MaterialsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\OperationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\ProductControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\SizeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cumponents\TestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,110 +117,170 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Cumponents\Accessories.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\AccessoriesControl.xaml.cs">
+      <DependentUpon>AccessoriesControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\AcessoriesImage.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\City.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Document.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\DocumentControl.xaml.cs">
+      <DependentUpon>DocumentControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Equipment.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\HardwareFailure.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\Item.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\ItemLocations.cs" />
+    <Compile Include="Cumponents\ItemUC.xaml.cs">
+      <DependentUpon>ItemUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\Location.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Material.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\MaterialImage.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cumponents\Model228.Context.cs">
+    <Compile Include="Cumponents\MaterialsControl.xaml.cs">
+      <DependentUpon>MaterialsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\ModelUP41.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model228.Context.tt</DependentUpon>
+      <DependentUpon>ModelUP41.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cumponents\Model228.cs">
+    <Compile Include="Cumponents\ModelUP41.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
-    <Compile Include="Cumponents\Model228.Designer.cs">
+    <Compile Include="Cumponents\ModelUP41.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model228.edmx</DependentUpon>
+      <DependentUpon>ModelUP41.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\OperationControl.xaml.cs">
+      <DependentUpon>OperationControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\OperationSpecification.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Order.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cumponents\OrderStatus.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\Party Class\Order.cs" />
+    <Compile Include="Cumponents\Party Class\Product.cs" />
     <Compile Include="Cumponents\Party Class\User.cs" />
     <Compile Include="Cumponents\PerformTasks.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Product.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\ProductAccessories.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\ProductControl.xaml.cs">
+      <DependentUpon>ProductControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\ProductDetail.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\ProductMaterial.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Role.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Size.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\SizeControl.xaml.cs">
+      <DependentUpon>SizeControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Standart.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\StatusOrder.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Storage.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Street.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Supplier.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\sysdiagrams.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\Test.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\TestUC.xaml.cs">
+      <DependentUpon>TestUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\TypeAccessories.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\TypeEquipment.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\TypeMaterial.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\Unit.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\User.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\UserImage.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="Cumponents\UserTasks.cs">
-      <DependentUpon>Model228.tt</DependentUpon>
+      <DependentUpon>ModelUP41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cumponents\WorkshopItem.cs">
+      <DependentUpon>ModelUP41.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\AddAccessoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddEditFailurePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddEditOrderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddEditTestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,6 +296,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\FailurePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MaterialsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,11 +308,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlanPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\TestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\WorkersListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DocumentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\HistoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StatusWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -213,6 +349,15 @@
     <Compile Include="Methods.cs" />
     <Compile Include="Pages\AddAccessoryPage.xaml.cs">
       <DependentUpon>AddAccessoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditFailurePage.xaml.cs">
+      <DependentUpon>AddEditFailurePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditOrderPage.xaml.cs">
+      <DependentUpon>AddEditOrderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditTestPage.xaml.cs">
+      <DependentUpon>AddEditTestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddMaterialPage.xaml.cs">
       <DependentUpon>AddMaterialPage.xaml</DependentUpon>
@@ -223,14 +368,26 @@
     <Compile Include="Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FailurePage.xaml.cs">
+      <DependentUpon>FailurePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MaterialsPage.xaml.cs">
       <DependentUpon>MaterialsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NavigationPage.xaml.cs">
       <DependentUpon>NavigationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\OrdersPage.xaml.cs">
+      <DependentUpon>OrdersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlanPage.xaml.cs">
+      <DependentUpon>PlanPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\WorkersListPage.xaml.cs">
       <DependentUpon>WorkersListPage.xaml</DependentUpon>
@@ -252,12 +409,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Cumponents\Model228.edmx">
+    <EntityDeploy Include="Cumponents\ModelUP41.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model228.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelUP41.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Cumponents\Model228.edmx.diagram">
-      <DependentUpon>Model228.edmx</DependentUpon>
+    <None Include="Cumponents\ModelUP41.edmx.diagram">
+      <DependentUpon>ModelUP41.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -272,16 +429,23 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cumponents\Model228.Context.tt">
+    <Content Include="Cumponents\ModelUP41.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model228.edmx</DependentUpon>
-      <LastGenOutput>Model228.Context.cs</LastGenOutput>
+      <DependentUpon>ModelUP41.edmx</DependentUpon>
+      <LastGenOutput>ModelUP41.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Cumponents\Model228.tt">
+    <Content Include="Cumponents\ModelUP41.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model228.edmx</DependentUpon>
-      <LastGenOutput>Model228.cs</LastGenOutput>
+      <DependentUpon>ModelUP41.edmx</DependentUpon>
+      <LastGenOutput>ModelUP41.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Ico.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\MenuIco.png" />
+    <Resource Include="Resources\history.png" />
+    <Resource Include="Resources\edit.png" />
+    <Resource Include="Resources\delete.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

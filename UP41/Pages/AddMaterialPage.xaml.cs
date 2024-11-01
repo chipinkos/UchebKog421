@@ -145,5 +145,11 @@ namespace UP41.Pages
             App.db.SaveChanges();
             NavigationService.Navigate(new MaterialsPage());
         }
+
+        private void BackButt_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MaterialsPage());
+        }
     }
 }
+
